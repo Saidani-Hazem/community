@@ -9,4 +9,9 @@ class post extends Model
 {
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
+
+
+    public function users(){
+        return $this->belongsTo(user::class);
+    }
 }
