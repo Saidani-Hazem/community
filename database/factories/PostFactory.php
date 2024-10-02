@@ -18,7 +18,7 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::inRandomOrder()->first()->id,
+            'user_id' => User::get('id')->random(),
             'description' =>fake()->sentence(7),
             'img' => fake()->imageUrl(640, 480, 'animals', true)
         ];

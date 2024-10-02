@@ -19,8 +19,8 @@ class SavedFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::inRandomOrder()->first()->id,
-            'post_id' => post::inRandomOrder()->first()->id,
+            'user_id' => User::get('id')->random(),
+            'post_id' => post::get('id')->random(),
         ];
     }
 }
