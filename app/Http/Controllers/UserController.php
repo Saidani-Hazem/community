@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\File;
 class UserController extends Controller
 {
 
+
+
+    public function index(){
+        return response()->json(['users' => user::all()]);
+    }
+
+
+    
     public function store(Request $request)
     {
         try {
